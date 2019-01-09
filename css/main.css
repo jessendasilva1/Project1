@@ -1,0 +1,17 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.headerLinks{
+    margin: 5px;
+    color: black;
+}
+#navBar{
+    background-color:lightgrey;
+    height: 80px;
+}
+#rootDiv{
+    padding: 0px;
+}
