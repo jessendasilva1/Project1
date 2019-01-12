@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 <head>
     <meta charset="UTF-8" />
     <title>Project 1</title>
@@ -28,13 +28,20 @@
     <div class="d-flex flex-grow-0 justify-content-center m-4">
         <form>
             <input type="text" placeholder="Search band or concert" size="80" name="search" id="searchBox">
-            <input type="button" value="Search">
+            <input type="button" value="Search" id="runSearch">
         </form>
     </div>
 
-    <div id="searchResults" class="container d-flex flex-grow-1 flex-column">
-    </div>
+    <div class="card-header">
+                <strong>
+                  <i class="fa fa-table"></i> Top Results</strong>
+              </div>
+    
+              <!-- This main card will hold each of the resulting articles -->
+              <div class="card-body" id="searchResults">
+              </div>
 
+            </div>
 
     <div id="footer" style="height: 70px; width: 100vw; background-color: black;" class="d-flex">
 
