@@ -1,10 +1,13 @@
+var artist = "";
+var artistIMG = "";
+
 //listen event to take search bar input and pass to the city variable
 $("#runSearch").on("click", function(event){
     event.preventDefault();
     var city = $("#searchBox").val().trim();
     search(city);
-
 });
+
 
 //function to perform the city search and display top results
 function search(city){
@@ -20,7 +23,14 @@ function search(city){
 
             var results = response._embedded.events;
             console.log(results);
-
+          
+          
+            artist = response._embedded.events[0]._embedded.attractions[0].name;// Gets artist name from the ticketmaster event results
+            sessionStorage.setItem("artist", artist);//Place artist name into local storage to be used in the search query on pg.2
+            artistIMG = response._embedded.events[0].images[0].url;//Gets artist img url for profile on pg.2
+            sessionStorage.setItem("artistIMG", artistIMG);//Place img URL into local storage to be used on pg.2
+          
+          
             for (var i = 0; i < results.length; i++){
 
             var searchList = $("<ul>");
@@ -39,4 +49,3 @@ function search(city){
             }
         });
 }
-
