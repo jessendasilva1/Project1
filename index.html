@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Project 1</title>
-        <!-- Bootstrap CSS CDN  -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-        <!-- jQuery JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   
-    </head>
+  
+<head>
+    <meta charset="UTF-8" />
+    <title>Project 1</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
 
-    <body>
-        <div id="rootDiv" style="height: 100vh;" class="container-fluid">
-            <div id="navBar" class="d-flex flex-row">
-                <div id="headerName" class="d-flex align-items-center flex-fill pl-4">
-                    <h2>Project 1</h2>
-                </div>
-                <div id="navLinks" class="d-flex justify-content-end align-items-center flex-fill pr-4">
-                    <a href="index.html" class="headerLinks">Home</a> 
-                    <a href="" class="headerLinks">About</a>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center m-4">
-                <form>
-                    <input type="text" placeholder="Search band or concert" size="80" name="search" id="searchBox">
-                    <input type="submit" value="Search" id="runSearch">
-                </form>   
-            </div> 
-            <div class="card-header">
+<body onload="start()" style="background-color:  whitesmoke">
+
+    <div id="navBar" class="d-flex flex-row">
+        <div id="headerName" class="d-flex flex-grow-1 align-items-center pl-4">
+            <h2>Project 1</h2>
+        </div>
+        <div id="navLinks" class="d-flex flex-grow-1 justify-content-end align-items-center  pr-4">
+            <a href="index.html" class="headerLinks">Home</a>
+            <a href="html/concertPage.html" class="headerLinks">Concert</a>
+        </div>
+    </div>
+
+    <div class="d-flex flex-grow-0 justify-content-center m-4">
+        <form>
+            <input type="text" placeholder="Search band or concert" size="80" name="search" id="searchBox">
+            <input type="button" value="Search" id="runSearch">
+        </form>
+    </div>
+
+    <div class="card-header">
                 <strong>
                   <i class="fa fa-table"></i> Top Results</strong>
               </div>
@@ -38,9 +42,11 @@
               </div>
 
             </div>
-        </div>
-        <script src="js/index.js"></script>
-    </body>
-   
-</html>
 
+    <div id="footer" style="height: 70px; width: 100vw; background-color: black;" class="d-flex">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Project 1</title>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+
+<body onload="start()" style="background-color:  whitesmoke">
+
+    <div id="navBar" class="d-flex flex-row">
+        <div id="headerName" class="d-flex flex-grow-1 align-items-center pl-4">
+            <h2>Project 1</h2>
+        </div>
+        <div id="navLinks" class="d-flex flex-grow-1 justify-content-end align-items-center  pr-4">
+            <a href="../index.html" class="headerLinks">Home</a>
+            <a href="html/concertPage.html" class="headerLinks">Concert</a>
+        </div>
+    </div>
+
+    <div class="d-flex flex-grow-0 justify-content-center m-4">
+        <form>
+            <input type="text" placeholder="Search band or concert" size="80" name="search" id="searchBox">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="concertResults" class="container d-flex flex-row flex-grow-1">
+
+        <div id="concertInfo" class="d-flex flex-column flex-grow-1 m-3">
+            <div id="concertDetails" class="card">
+                <h2 class="card-header">Post Malone Stoney Tour</h2>
+                <div id="concertDetailsSpecific" class="d-flex flex-column m-2">
+                    <div id="concertDate1" class="d-flex border-bottom align-items-baseline m-3 pb-2 dates">
+                        <div class="d-flex flex-grow-1">
+                            <h5>Janurary 28th, 2019</h5>
+                        </div>
+                        <div class="d-flex flex-grow-0 pr-3">
+                            <h5>Hamilton, Ontario</h5>
+                        </div>
+                        <div class="d-flex flex-grow-0">
+                            <button type="button" class="btn btn-outline-primary">Buy Tickets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="concertLocation" class="card d-flex flex-row justify-content-between mt-3">
+                <div id="concertAddress" class="d-flex flex-column">
+                    <p>Scotia Bank Arena</p>
+                    <p>Toronto, Ontario, Canada</p>
+                    <p>40 Bay St, Toronto, ON, M5J 2X2</p>
+                </div>
+                <div id="googleMapsIntegration" class="d-flex align-items-center">
+                    <img src="../assets/googleMapsExample.png" height="100px" width="100px" alt="googleMapsImage">
+                </div>
+            </div>
+        </div>
+
+        <div id="concertSpotify" class="d-flex flex-column m-3">
+            <div style="height: 150px; width: 200px; border: 1px solid black;" id="artistPicture">
+                <!-- add artist image here-->
+            </div>
+            <div id="artistInfo" class="d-flex flex-column align-items-center">
+                <h5 class="mb-1">Post Malone</h5>
+                <p class="mb-1">Texas, USA</p>
+            </div>
+            <div id="itunesPlaylist" style="height: 300px; width: 200px; border: 1px solid black;" id="artistSpotify" class="d-flex">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer id="footer" style="height: 70px; width: 100vw; background-color: black;" class="d-flex flex-grow-0 page-footer">
+
+    </footer>
+
+</body>
+
+</html>
