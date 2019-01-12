@@ -8,10 +8,10 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <!-- jQuery JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js/index.js"></script>
+   
     </head>
 
-    <body onload="start()">
+    <body>
         <div id="rootDiv" style="height: 100vh;" class="container-fluid">
             <div id="navBar" class="d-flex flex-row">
                 <div id="headerName" class="d-flex align-items-center flex-fill pl-4">
@@ -25,13 +25,22 @@
             <div class="d-flex justify-content-center m-4">
                 <form>
                     <input type="text" placeholder="Search band or concert" size="80" name="search" id="searchBox">
-                    <input type="submit" value="Search">
+                    <input type="submit" value="Search" id="runSearch">
                 </form>   
             </div> 
-            <div id="searchResults" class="d-flex m-4">
+            <div class="card-header">
+                <strong>
+                  <i class="fa fa-table"></i> Top Results</strong>
+              </div>
+    
+              <!-- This main card will hold each of the resulting articles -->
+              <div class="card-body" id="searchResults">
+              </div>
 
             </div>
         </div>
+        <script src="js/index.js"></script>
     </body>
+   
 </html>
 
