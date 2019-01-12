@@ -1,18 +1,29 @@
+function start() {
+
+}
 
 var city = "Vancouver";
 var apiKey = "IbzK4URLKfi6fOzYfdkwQCKu9b6BRBsU";
-var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=CA&classificationName=music&City=" +city+"&apikey="+apiKey;
+var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?countryCode=CA&classificationName=music&City=" + city + "&apikey=" + apiKey;
 
 console.log(queryURL);
-
-$.ajax ({
+/*
+$.ajax({
     url: queryURL,
     method: "GET",
-    async:true,
+    async: true,
     dataType: "json"
-}).then(function(response) {
+}).then(function (response) {
     console.log(response._embedded.events);
 
     var results = response._embedded.events;
+    console.log(results[0].name);
+
+    $.each(results, function (index, item) {
+        $("#searchResults").append(`
+            <p>${item.name}</p>
+        `);
+    })
 
 });
+*/
