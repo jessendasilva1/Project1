@@ -44,7 +44,7 @@
 
   	// Handle the errors
   }, function (errorObject) {
-  	console.log("Errors handled: " + errorObject.code);
+  	//console.log("Errors handled: " + errorObject.code);
   });
 
 
@@ -61,15 +61,10 @@
   	}).then(function (response) {
 
   		var results = response._embedded.events;
-  		console.log(results);
+  		//console.log(results);
 
   		sessionStorage.setItem("currentListOfConcerts", JSON.stringify(results));
-/*
-  		artist = response._embedded.events[0]._embedded.attractions[0].name; // Gets artist name from the ticketmaster event results
-  		sessionStorage.setItem("artist", artist); //Place artist name into local storage to be used in the search query on pg.2
-  		artistIMG = response._embedded.events[0].images[0].url; //Gets artist img url for profile on pg.2
-  		sessionStorage.setItem("artistIMG", artistIMG); //Place img URL into local storage to be used on pg.2
-*/
+
   		for (var i = 0; i < results.length; i++) {
 
   			var name = (results[i].name);
@@ -88,7 +83,7 @@
   	});
   }
 
-function displayConcertDetails(element) {
-	sessionStorage.setItem("choice", JSON.stringify(element.dataset.concert));
-	window.location.href = "html/concertPage.html";
-}
+  function displayConcertDetails(element) {
+  	sessionStorage.setItem("choice", JSON.stringify(element.dataset.concert));
+  	window.location.href = "html/concertPage.html";
+  }
