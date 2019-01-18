@@ -54,7 +54,7 @@ function call1() {
         $("#pictureName").text(artistName);
         $("#artistPicture").empty();
         $("#artistPicture").append(`
-            <img id="${artist}" src="${concert[choice].images[0].url}" height="200px" width="200px">
+            <img id="${artist}" src="${concert[choice].images[0].url}" height="200px" width="250px">
         `);
         $("#arenaName").text(concert[choice]._embedded.venues[0].name);
         let location = concert[choice]._embedded.venues[0].city.name + ", " + concert[choice]._embedded.venues[0].country.name;
