@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Project 1</title>
+    <title>Concert Now</title>
     <!-- Bootstrap CSS CDN  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous" />
@@ -12,11 +12,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body style="background-color:  whitesmoke">
+<body onload="test()" style="background-color:  whitesmoke">
 
     <div id="navBar" class="d-flex flex-row">
         <div id="headerName" class="d-flex flex-grow-1 align-items-center pl-4">
-            <h2>Project 1</h2>
+            <h2>Concert Now</h2>
         </div>
         <div id="navLinks" class="d-flex flex-grow-1 justify-content-end align-items-center  pr-4">
             <a href="../index.html" class="headerLinks">Home</a>
@@ -35,14 +35,14 @@
 
         <div id="concertInfo" class="d-flex flex-column flex-grow-1 m-3">
             <div id="concertDetails" class="card">
-                <h2 class="card-header">Post Malone Stoney Tour</h2>
+                <h2 id="artistName" class="card-header"></h2>
                 <div id="concertDetailsSpecific" class="d-flex flex-column m-2">
                     <div id="concertDate1" class="d-flex border-bottom align-items-baseline m-3 pb-2 dates">
                         <div class="d-flex flex-grow-1">
-                            <h5>Janurary 28th, 2019</h5>
+                            <h5 id="concertDateHeader"></h5>
                         </div>
                         <div class="d-flex flex-grow-0 pr-3">
-                            <h5>Hamilton, Ontario</h5>
+                            <h5 id="concertLocationHeader"></h5>
                         </div>
                         <div class="d-flex flex-grow-0">
                             <button type="button" class="btn btn-outline-primary">Buy Tickets</button>
@@ -50,11 +50,11 @@
                     </div>
                 </div>
             </div>
-            <div id="concertLocation" class="card d-flex flex-row justify-content-between mt-3">
+            <div id="concertLocation" class="card d-flex flex-row justify-content-between mt-3 p-2">
                 <div id="concertAddress" class="d-flex flex-column">
-                    <p>Scotia Bank Arena</p>
-                    <p>Toronto, Ontario, Canada</p>
-                    <p>40 Bay St, Toronto, ON, M5J 2X2</p>
+                    <p id="arenaName"></p>
+                    <p id="cityCountry"></p>
+                    <p id="streetAddress"></p>
                 </div>
                 <div id="googleMapsIntegration" class="d-flex align-items-center">
                     <img src="../assets/googleMapsExample.png" height="100px" width="100px" alt="googleMapsImage">
@@ -63,27 +63,28 @@
         </div>
 
         <div id="concertSpotify" class="d-flex flex-column m-3">
-            <div style="height: 150px; width: 250px; border: 1px solid black;" id="artistPicture">
+            <div id="artistPicture" class="d-flex">
                 <!-- add artist image here-->
             </div>
             <div id="artistInfo" class="d-flex flex-column align-items-center">
-                <h5 id="artistName" class="mb-1">Post Malone</h5>
-                <p id="artistOrigin" class="mb-1">Texas, USA</p>
+                <h5 id="pictureName" class="mb-1"></h5>
             </div>
             <div id="itunesPlaylist" style="height: 362px; width: 250px; border: 1px solid black;" id="artistSpotify" class="d-flex">
-                <iframe id="frame1" allow="autoplay *; encrypted-media *;" style="width:100%;max-width:250px;overflow:hidden;background:transparent;" src="https://embed.music.apple.com/us/album/bang-on-em/220312813?i=220321847&app=music" height="150" frameborder="0"></iframe>
-                <iframe id="frame2" allow="autoplay *; encrypted-media *;" style="width:100%;max-width:250px;overflow:hidden;background:transparent;" src="https://embed.music.apple.com/us/album/stuck-on-you/220312813?i=220316536&app=music" height="150" frameborder="0"></iframe>
-                <iframe id="frame3" allow="autoplay *; encrypted-media *;" style="width:100%;max-width:250px;overflow:hidden;background:transparent;" src="https://embed.music.apple.com/us/album/return-of-the-mac-aka-new-york-s/220312813?i=220313297&app=music" height="150" frameborder="0"></iframe>
+                <iframe id="frame1" allow="autoplay *; encrypted-media *;" style="width:100%;max-width:250px;overflow:hidden;background:transparent;" src="" height="150" frameborder="0"></iframe>
+                <iframe id="frame2" allow="autoplay *; encrypted-media *;" style="width:100%;max-width:250px;overflow:hidden;background:transparent;" src="" height="150" frameborder="0"></iframe>
+                <iframe id="frame3" allow="autoplay *; encrypted-media *;" style="width:100%;max-width:250px;overflow:hidden;background:transparent;" src="" height="150" frameborder="0"></iframe>
             </div>
         </div>
 
     </div>
 
 
-    <footer id="footer" style="height: 70px; width: 100vw; background-color: black;" class="d-flex flex-grow-0 page-footer">
-
+    <footer id="footer" style="height: 70px; width: 100vw; background-color: black;" class="d-flex flex-grow-0 flex-column align-items-center page-footer">
+        <p style="color: white; padding-top: 5px;">Copyright 2019</p>
+        <p style="font-size: 10px; color: white;">Made by: Jessen, Jacob, Taylor</p>
     </footer>
 
+    <script src="../js/index.js"></script>
     <script src="../js/page2.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
 
